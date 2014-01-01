@@ -15,6 +15,7 @@
 
 ####To add
 - !!!! mod_rewrite: Seems to be set up correctly for puppet but getting not_enabled message
+    - Issues: Not picking up document root or mod_rewrite from puppet/hieradata/common.yaml?
 - nodejs
 - grunt
 - bower
