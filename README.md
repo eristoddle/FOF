@@ -22,7 +22,6 @@
 - sass
 - compass
 - claymate
-- check phpmyadmin
 
 ###Frameworks
 - Phalcon PHP
