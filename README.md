@@ -1,6 +1,8 @@
 #FOF
 
-##Vagrant box
+##Project Contents
+
+###Vagrant box
 - Apache2
 - MySQL
 - PHP 5.4
@@ -10,7 +12,7 @@
 - Phalcon Devtools
 - Xdebug
 
-###To add
+####To add
 - nodejs
 - grunt
 - bower
@@ -19,9 +21,26 @@
 - compass
 - claymate
 
-##Frameworks
+###Frameworks
 - Phalcon PHP
 - Gumby 2
 
-###To add
+####To add
 - Backbone.js
+
+##Getting Started
+
+I have tried to keep most of the development environment as well as tools self contained in the virtualbox. But you will need the following to get started
+
+- VirtualBox
+- Vagrant
+- Git (Optional: if you want to git pull this project instead of downloading the zip)
+
+###Steps after installing above
+
+- run git clone https://github.com/eristoddle/FOF.git
+- open terminal in FOF/vagrant
+- run vagrant up
+- wait for vagrant to finish
+- Browse to http://192.168.56.101
+- Your application files will be located in /FOF/www/ and this folder is shared with vagrant
