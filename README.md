@@ -30,17 +30,17 @@
 
 ##Getting Started
 
-I have tried to keep most of the development environment as well as tools self contained in the virtualbox. But you will need the following to get started
+I have tried to keep most of the development environment as well as tools self contained in the virtualbox. But you will need the following to get started.
 
-- VirtualBox
-- Vagrant
+- [VirtualBox](http://virtualbox.org)
+- [Vagrant](http://getvagrant.com)
 - Git (Optional: if you want to git pull this project instead of downloading the zip)
 
 ###Steps after installing above
 
-- run git clone https://github.com/eristoddle/FOF.git
-- open terminal in FOF/vagrant
-- run vagrant up
+- run `git clone https://github.com/eristoddle/FOF.git` or download the archive and extract it
+- open terminal in `FOF/vagrant`
+- run `vagrant up`
 - wait for vagrant to finish
 - Browse to http://192.168.56.101
-- Your application files will be located in /FOF/www/ and this folder is shared with vagrant
+- Your application files will be located in `FOF/www/` and this folder is shared with vagrants
