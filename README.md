@@ -1,5 +1,9 @@
 #FOF
 
+##Concept
+
+Get a development environment and web application up and running in less than an hour with all necessary and useful development tools with a modern PHP framework and frontend framework pre-installed and pre-configured and do it by only installing virtualbox, vagrant and running one command: `vagrant up`.
+
 ##Project Contents
 
 ###Vagrant box
@@ -55,4 +59,4 @@ I have tried to keep most of the development environment as well as tools self c
 - Xdebug is installed and usable in box
 - ssh to vagrant box with `vagrant ssh`. Then all command line tools in box are available, including:
     - PHP QA Tools
-    - Phalcon developer tools
+    - Phalcon developer tools in Phalcon
