@@ -11,16 +11,17 @@
 - Phalcon PHP
 - Phalcon Devtools
 - Xdebug
+- PhpMyAdmin
 
 ####To add
-- !!!! mod_rewrite
+- !!!! mod_rewrite: Seems to be set up correctly for puppet but getting not_enabled message
 - nodejs
 - grunt
 - bower
-- composer
 - sass
 - compass
 - claymate
+- check phpmyadmin
 
 ###Frameworks
 - Phalcon PHP
@@ -28,6 +29,9 @@
 
 ####To add
 - Backbone.js
+- More needed services to phalcon project
+- Add mongo service
+- Sync config.ini credentials with puppet credentials
 
 ##Getting Started
 
@@ -44,4 +48,4 @@ I have tried to keep most of the development environment as well as tools self c
 - run `vagrant up`
 - wait for vagrant to finish
 - Browse to http://192.168.56.101
-- Your application files will be located in `FOF/www/` and this folder is shared with vagrants
+- Your application files will be located in `FOF/www/` and this folder is shared with the vagrant box var/www

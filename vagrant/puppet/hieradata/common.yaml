@@ -13,7 +13,7 @@ vagrantfile-local:
         provider:
             virtualbox:
                 modifyvm:
-                    name: ingresse-vm-box
+                    name: FOF-vm-box
                     natdnshostresolver1: on
                     memory: '1024'
                 setextradata:
@@ -28,12 +28,12 @@ vagrantfile-local:
         synced_folder:
             IodAHGmG0WpV:
                 id: vagrant-root
-                source: ~/Documents/vagrant/ingresse/www
+                source: ../www
                 target: /var/www
                 nfs: 'false'
             eoGxaU7GbILP:
                 id: vagrant-root
-                source: ~/Documents/vagrant/ingresse/shared
+                source: ../shared
                 target: /home/shared
                 nfs: 'false'
         usable_port_range: 2200..2250
@@ -68,10 +68,10 @@ apache:
         - rewrite
     vhosts:
         tFD3LmNfwd2r:
-            servername: ingresse.dev
+            servername: fof.local
             serveraliases:
-                - www.ingresse.dev
-            docroot: /var/www/
+                - www.fof.local
+            docroot: /var/www/public/
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -113,21 +113,21 @@ xdebug:
     install: '1'
     settings:
         xdebug.default_enable: '1'
-        xdebug.remote_autostart: '0'
+        xdebug.remote_autostart: '1'
         xdebug.remote_connect_back: '1'
         xdebug.remote_enable: '1'
         xdebug.remote_handler: dbgp
         xdebug.remote_port: '9000'
 mysql:
     root_password: root
-    phpmyadmin: 0
+    phpmyadmin: 1
     databases:
         V9eOYWGZnqhE:
             grant:
                 - ALL
-            name: ingresse
+            name: fof
             host: localhost
-            user: ingresse
-            password: ingresse
+            user: fof
+            password: fof
             sql_file: ''
 
