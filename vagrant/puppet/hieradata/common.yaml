@@ -1,0 +1,133 @@
+---
+vagrantfile-local:
+    vm:
+        box: ubuntu-precise12042-x64-vbox43
+        box_url: 'http://box.puphpet.com/ubuntu-precise12042-x64-vbox43.box'
+        hostname: null
+        network:
+            private_network: 192.168.56.101
+            forwarded_port:
+                C6nmEfhRx7fb:
+                    host: ''
+                    guest: ''
+        provider:
+            virtualbox:
+                modifyvm:
+                    name: ingresse-vm-box
+                    natdnshostresolver1: on
+                    memory: '1024'
+                setextradata:
+                    VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root: 1
+        provision:
+            puppet:
+                manifests_path: puppet/manifests
+                options:
+                    - --verbose
+                    - '--hiera_config /vagrant/hiera.yaml'
+                    - '--parser future'
+        synced_folder:
+            IodAHGmG0WpV:
+                id: vagrant-root
+                source: ~/Documents/vagrant/ingresse/www
+                target: /var/www
+                nfs: 'false'
+            eoGxaU7GbILP:
+                id: vagrant-root
+                source: ~/Documents/vagrant/ingresse/shared
+                target: /home/shared
+                nfs: 'false'
+        usable_port_range: 2200..2250
+    ssh:
+        host: null
+        port: null
+        private_key_path: null
+        username: vagrant
+        guest_port: null
+        keep_alive: true
+        forward_agent: false
+        forward_x11: false
+        shell: 'bash -l'
+    vagrant:
+        host: ':detect'
+server:
+    packages:
+        - nano
+        - vim
+        - git
+        - git-core
+        - gcc
+        - autoconf
+        - php5-dev
+    dot_files:
+        -
+            bash_aliases: null
+    _prevent_empty: ''
+apache:
+    modules:
+        - php
+        - rewrite
+    vhosts:
+        tFD3LmNfwd2r:
+            servername: ingresse.dev
+            serveraliases:
+                - www.ingresse.dev
+            docroot: /var/www/
+            port: '80'
+            setenv:
+                - 'APP_ENV dev'
+            override:
+                - All
+    user: www-data
+    group: www-data
+    default_vhost: true
+    mpm_module: prefork
+php:
+    version: '54'
+    composer: '1'
+    modules:
+        php:
+            - cgi
+            - cli
+            - curl
+            - intl
+            - mcrypt
+            - memcache
+            - memcached
+            - pspell
+            - sqlite
+            - tidy
+        pear: {  }
+        pecl:
+            - pecl_http
+    ini:
+        display_errors: On
+        error_reporting: '-1'
+        session.save_path: /var/lib/php/session
+        allow_url_fopen: '1'
+        allow_url_include: '1'
+        error_log: syslog
+        file_uploads: '1'
+        apc.enabled: '1'
+    timezone: America/Sao_Paulo
+xdebug:
+    install: '1'
+    settings:
+        xdebug.default_enable: '1'
+        xdebug.remote_autostart: '0'
+        xdebug.remote_connect_back: '1'
+        xdebug.remote_enable: '1'
+        xdebug.remote_handler: dbgp
+        xdebug.remote_port: '9000'
+mysql:
+    root_password: root
+    phpmyadmin: 0
+    databases:
+        V9eOYWGZnqhE:
+            grant:
+                - ALL
+            name: ingresse
+            host: localhost
+            user: ingresse
+            password: ingresse
+            sql_file: ''
+
