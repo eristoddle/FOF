@@ -13,6 +13,7 @@
 - Xdebug
 
 ####To add
+- !!!! mod_rewrite
 - nodejs
 - grunt
 - bower
