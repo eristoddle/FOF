@@ -4,8 +4,8 @@ return new \Phalcon\Config(array(
 	'database' => array(
 		'adapter'     => 'Mysql',
 		'host'        => 'localhost',
-		'username'    => 'root',
-		'password'    => '',
+		'username'    => 'fof',
+		'password'    => 'fof',
 		'dbname'      => 'fof',
 	),
 	'application' => array(
@@ -18,5 +18,8 @@ return new \Phalcon\Config(array(
         'logsDir'       => __DIR__ . '/../../app/logs/',
         'modulesDir'       => __DIR__ . '/../../app/modules/',
 		'baseUri'        => '/www/',
-	)
+	),
+    'mongo' => array(
+
+    )
 ));
