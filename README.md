@@ -32,6 +32,7 @@
 - More needed services to phalcon project
 - Add mongo service
 - Sync config.ini credentials with puppet credentials
+- Fix Phalcon webtools relative path issue
 
 ##Getting Started
 
@@ -49,3 +50,9 @@ I have tried to keep most of the development environment as well as tools self c
 - wait for vagrant to finish
 - Browse to http://192.168.56.101
 - Your application files will be located in `FOF/www/` and this folder is shared with the vagrant box var/www
+- PhpMyAdmin will be at http://192.168.56.101
+- fof database is already is use in project. Modify it to add tables. Then use http://192.168.56.101/webtools.php to create models and scaffolding
+- Xdebug is installed and usable in box
+- ssh to vagrant box with `vagrant ssh`. Then all command line tools in box are available, including:
+    - PHP QA Tools
+    - Phalcon developer tools
