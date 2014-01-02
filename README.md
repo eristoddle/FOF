@@ -62,3 +62,4 @@ I have tried to keep most of the development environment as well as tools self c
 
 - Not picking up document root from `puppet/hieradata/common.yaml`? - Currently manually edited in box to `/var/www/public`
 - Phpmyadmin address off after manual edit
+- Phalcon dev tools installed but not available in path
