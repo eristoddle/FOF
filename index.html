@@ -32,6 +32,11 @@
 <a name="fof" class="anchor" href="#fof"><span class="octicon octicon-link"></span></a>FOF</h1>
 
 <h2>
+<a name="concept" class="anchor" href="#concept"><span class="octicon octicon-link"></span></a>Concept</h2>
+
+<p>Get a development environment and web application up and running in less than an hour with all necessary and useful development tools with a modern PHP framework and frontend framework pre-installed and pre-configured and do it by only installing virtualbox, vagrant and running one command: <code>vagrant up</code>.</p>
+
+<h2>
 <a name="project-contents" class="anchor" href="#project-contents"><span class="octicon octicon-link"></span></a>Project Contents</h2>
 
 <h3>
@@ -46,6 +51,7 @@
 <li>Phalcon PHP</li>
 <li>Phalcon Devtools</li>
 <li>Xdebug</li>
+<li>PhpMyAdmin</li>
 </ul><h4>
 <a name="to-add" class="anchor" href="#to-add"><span class="octicon octicon-link"></span></a>To add</h4>
 
@@ -53,7 +59,6 @@
 <li>nodejs</li>
 <li>grunt</li>
 <li>bower</li>
-<li>composer</li>
 <li>sass</li>
 <li>compass</li>
 <li>claymate</li>
@@ -68,6 +73,9 @@
 
 <ul>
 <li>Backbone.js</li>
+<li>More needed services to project</li>
+<li>Add mongo service to project</li>
+<li>Fix Phalcon webtools relative path issue</li>
 </ul><h2>
 <a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
@@ -89,7 +97,25 @@
 <li>wait for vagrant to finish</li>
 <li>Browse to <a href="http://192.168.56.101">http://192.168.56.101</a>
 </li>
-<li>Your application files will be located in <code>FOF/www/</code> and this folder is shared with vagrants</li>
+<li>Your application files will be located in <code>FOF/www/</code> and this folder is shared with the vagrant box var/www</li>
+<li>PhpMyAdmin will be at <a href="http://192.168.56.101/phpmyadmin">http://192.168.56.101/phpmyadmin</a>
+</li>
+<li>fof database is already is use in project. Modify it to add tables. Then use <a href="http://192.168.56.101/webtools.php">http://192.168.56.101/webtools.php</a> to create models and scaffolding</li>
+<li>Xdebug is installed and usable in box</li>
+<li>ssh to vagrant box with <code>vagrant ssh</code>. Then all command line tools in box are available, including:
+
+<ul>
+<li>PHP QA Tools</li>
+<li>Phalcon developer tools in Phalcon</li>
+</ul>
+</li>
+</ul><h2>
+<a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues</h2>
+
+<ul>
+<li>Not picking up document root from <code>puppet/hieradata/common.yaml</code>? - Currently manually edited in box to <code>/var/www/public</code>
+</li>
+<li>Volt cache directory not writable. Complete project user and group is vagrant. logs folder will have this issue too</li>
 </ul>
       </section>
     </div>
