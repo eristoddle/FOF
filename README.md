@@ -61,4 +61,4 @@ I have tried to keep most of the development environment as well as tools self c
 ##Issues
 
 - Not picking up document root from `puppet/hieradata/common.yaml`? - Currently manually edited in box to `/var/www/public`
-- Volt cache directory not writable. Complete project user and group is vagrant. logs folder will have this issue too
+- Phpmyadmin address off after manual edit
