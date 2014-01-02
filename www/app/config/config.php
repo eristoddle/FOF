@@ -17,9 +17,9 @@ return new \Phalcon\Config(array(
 		'cacheDir'       => __DIR__ . '/../../app/cache/',
         'logsDir'       => __DIR__ . '/../../app/logs/',
         'modulesDir'       => __DIR__ . '/../../app/modules/',
-		'baseUri'        => '/www/',
+		'baseUri'        => '/',
 	),
     'mongo' => array(
-
+        
     )
 ));
