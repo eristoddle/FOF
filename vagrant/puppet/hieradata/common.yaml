@@ -66,12 +66,13 @@ apache:
     modules:
         - php
         - rewrite
+    webroot_location: /var/www/public
     vhosts:
         tFD3LmNfwd2r:
             servername: fof.local
             serveraliases:
                 - www.fof.local
-            docroot: /var/www/public/
+            docroot: /var/www/public
             port: '80'
             setenv:
                 - 'APP_ENV dev'
@@ -120,7 +121,7 @@ xdebug:
         xdebug.remote_port: '9000'
 mysql:
     root_password: root
-    phpmyadmin: 1
+    phpmyadmin: 0
     databases:
         V9eOYWGZnqhE:
             grant:
