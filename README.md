@@ -60,10 +60,10 @@ I have tried to keep most of the development environment as well as tools self c
 
 ##Issues
 
-- Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host for now.
+- Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host and edit host's host file for now.
 - Phpmyadmin address off after manual edit - scratching this for now because it breaks the provisioning. Added adminer.php in public folder as a replacement temporarily.
 - Phalcon dev tools installed but not available in path, known issue with dev tools
 
 ##Notes
 
-- Phalcon takes quite a while to install depending on the host box, I guess, but it will get done.
+- Phalcon takes quite a while to install depending on the host box, I guess, but it will finish.
