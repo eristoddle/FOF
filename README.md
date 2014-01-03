@@ -63,4 +63,3 @@ I have tried to keep most of the development environment as well as tools self c
 - Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host for now.
 - Phpmyadmin address off after manual edit - scratching this for now because it breaks the provisioning. Added adminer.php in public folder as a replacement temporarily.
 - Phalcon dev tools installed but not available in path, known issue with dev tools
-- For Windows, you have to make sure git keeps the linux line endings because the shell folder is shared to the virtualbox or else it will freak out and assume \r is a command. 
