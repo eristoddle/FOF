@@ -48,7 +48,7 @@ I have tried to keep most of the development environment as well as tools self c
 - open terminal in `FOF/vagrant`
 - run `vagrant up`
 - wait for vagrant to finish
-- set up this in your host's host file: `192.168.56.101  fof.local` (Planning to change this so http://192.168.56.101 works for the project but can't quite figure out how to set the main apache doc root, though creating a virtual host seems easy. Editing a host file adds another steps to the 3 steps I claim.)
+- set up this in your host's host file: `192.168.56.101  fof.local` (Planning to change this so http://192.168.56.101 works for the project but can't quite figure out how to set the main apache doc root, though creating a virtual host seems easy. Editing a host file adds another step to the 3 steps I claim and I planning on keeping it 3 steps.)
 - Browse to http://fof.local
 - Your application files will be located in `FOF/www/` and this folder is shared with the vagrant box var/www
 - ~PhpMyAdmin will be at http://fof.local/phpmyadmin~ Adminer available at http://fof.local/adminer.php
@@ -63,3 +63,7 @@ I have tried to keep most of the development environment as well as tools self c
 - Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host for now.
 - Phpmyadmin address off after manual edit - scratching this for now because it breaks the provisioning. Added adminer.php in public folder as a replacement temporarily.
 - Phalcon dev tools installed but not available in path, known issue with dev tools
+
+##Notes
+
+- Phalcon takes quite a while to install depending on the host box, I guess, but it will get done.
