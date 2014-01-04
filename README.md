@@ -61,6 +61,6 @@ I have tried to keep most of the development environment as well as tools self c
 - Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host and edit host's host file for now.
 - Phalcon dev tools installed but not available in path, known issue with dev tools
 
-##Notes
-
-- Phalcon takes quite a while to install depending on the host box, I guess, but it will finish.
+##TODO
+- Keep all dev tools in shell scripts
+- Move tools needed in all environments to puppet
