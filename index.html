@@ -51,11 +51,7 @@
 <li>Phalcon PHP</li>
 <li>Phalcon Devtools</li>
 <li>Xdebug</li>
-<li>~PhpMyAdmin~</li>
-</ul><h4>
-<a name="to-add" class="anchor" href="#to-add"><span class="octicon octicon-link"></span></a>To add</h4>
-
-<ul>
+<li>PhpMyAdmin</li>
 <li>nodejs</li>
 <li>grunt</li>
 <li>bower</li>
@@ -68,7 +64,7 @@
 <ul>
 <li>Phalcon PHP</li>
 </ul><h4>
-<a name="to-add-1" class="anchor" href="#to-add-1"><span class="octicon octicon-link"></span></a>To add</h4>
+<a name="to-add" class="anchor" href="#to-add"><span class="octicon octicon-link"></span></a>To add</h4>
 
 <ul>
 <li>Gumby 2</li>
@@ -98,7 +94,7 @@
 <li>Browse to <a href="http://fof.local">http://fof.local</a>
 </li>
 <li>Your application files will be located in <code>FOF/www/</code> and this folder is shared with the vagrant box var/www</li>
-<li>~PhpMyAdmin will be at <a href="http://fof.local/phpmyadmin%7E">http://fof.local/phpmyadmin~</a> Adminer available at <a href="http://fof.local/adminer.php">http://fof.local/adminer.php</a>
+<li>PhpMyAdmin will be at <a href="http://192.168.56.101/phpmyadmin">http://192.168.56.101/phpmyadmin</a>
 </li>
 <li>fof database is already is use in project. Modify it to add tables. Then use <a href="http://fof.local/webtools.php">http://fof.local/webtools.php</a> to create models and scaffolding</li>
 <li>Xdebug is installed and usable in box</li>
@@ -114,13 +110,13 @@
 
 <ul>
 <li>Can't figure out how to set Apache's document root so I can just browse to <a href="http://192.168.56.101">http://192.168.56.101</a>, so have to use a virtual host and edit host's host file for now.</li>
-<li>Phpmyadmin address off after manual edit - scratching this for now because it breaks the provisioning. Added adminer.php in public folder as a replacement temporarily.</li>
 <li>Phalcon dev tools installed but not available in path, known issue with dev tools</li>
 </ul><h2>
-<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
 
 <ul>
-<li>Phalcon takes quite a while to install depending on the host box, I guess, but it will finish.</li>
+<li>Keep all dev tools in shell scripts</li>
+<li>Move tools needed in all environments to puppet</li>
 </ul>
       </section>
     </div>
