@@ -120,7 +120,7 @@ xdebug:
         xdebug.remote_port: '9000'
 mysql:
     root_password: root
-    phpmyadmin: 0
+    phpmyadmin: 1
     databases:
         V9eOYWGZnqhE:
             grant:

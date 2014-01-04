@@ -15,9 +15,7 @@ Get a development environment and web application up and running in less than an
 - Phalcon PHP
 - Phalcon Devtools
 - Xdebug
-- ~PhpMyAdmin~
-
-####To add
+- PhpMyAdmin
 - nodejs
 - grunt
 - bower
@@ -51,7 +49,7 @@ I have tried to keep most of the development environment as well as tools self c
 - set up this in your host's host file: `192.168.56.101  fof.local` (Planning to change this so http://192.168.56.101 works for the project but can't quite figure out how to set the main apache doc root, though creating a virtual host seems easy. Editing a host file adds another step to the 3 steps I claim and I planning on keeping it 3 steps.)
 - Browse to http://fof.local
 - Your application files will be located in `FOF/www/` and this folder is shared with the vagrant box var/www
-- ~PhpMyAdmin will be at http://fof.local/phpmyadmin~ Adminer available at http://fof.local/adminer.php
+- PhpMyAdmin will be at http://192.168.56.101/phpmyadmin
 - fof database is already is use in project. Modify it to add tables. Then use http://fof.local/webtools.php to create models and scaffolding
 - Xdebug is installed and usable in box
 - ssh to vagrant box with `vagrant ssh`. Then all command line tools in box are available, including:
@@ -61,7 +59,6 @@ I have tried to keep most of the development environment as well as tools self c
 ##Issues
 
 - Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host and edit host's host file for now.
-- Phpmyadmin address off after manual edit - scratching this for now because it breaks the provisioning. Added adminer.php in public folder as a replacement temporarily.
 - Phalcon dev tools installed but not available in path, known issue with dev tools
 
 ##Notes

@@ -31,6 +31,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => "shell/install_phalcon_devtools.sh"
   config.vm.provision :shell, :path => "shell/install_phpqatools.sh"
   config.vm.provision :shell, :path => "shell/install_mongodb.sh"
+  config.vm.provision :shell, :path => "shell/install_ruby_gems.sh"
+  config.vm.provision :shell, :path => "shell/install_nodejs.sh"
 
 
   config.ssh.username = "vagrant"
