@@ -1,6 +1,14 @@
 #!/bin/bash
 sudo su
-apt-get install nodejs -y
+mkdir ~/local
+echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+. ~/.bashrc
+cd ~/local
+git clone git://github.com/joyent/node.git
+cd node
+./configure --prefix=~/local
+make install
+cd ~/local
 git clone git://github.com/isaacs/npm.git
 cd npm
 make install
