@@ -1,10 +1,9 @@
 #!/bin/bash
 sudo su
-
 apt-get install nodejs -y
-
-curl https://npmjs.org/install.sh | sudo sh
-
+git clone git://github.com/isaacs/npm.git
+cd npm
+make install
 npm install -g claymate
 npm install -g grunt
 npm install -g bower

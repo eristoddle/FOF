@@ -1,1 +1,75 @@
-<html><body><h1>Mod-Rewrite is not enabled</h1><p>Please enable rewrite module on your web server to continue</body></html>
+<html>
+<head>
+    <title>FOF</title>
+</head>
+<body>
+<h1>FOF</h1>
+<h2>Concept</h2>
+<p>Get a development environment and web application up and running in less than an hour with all necessary and useful development tools with a modern PHP framework and frontend framework pre-installed and pre-configured and do it by only installing virtualbox, vagrant and running one command: <code>vagrant up</code>.</p>
+<h2>Project Contents</h2>
+<h3>Vagrant box</h3>
+<ul>
+<li>Apache2</li>
+<li>MySQL</li>
+<li>PHP 5.4</li>
+<li>MongoDB</li>
+<li>PHP QA Tools</li>
+<li>Phalcon PHP</li>
+<li>Phalcon Devtools</li>
+<li>Xdebug</li>
+<li>PhpMyAdmin</li>
+<li>nodejs</li>
+<li>grunt</li>
+<li>bower</li>
+<li>sass</li>
+<li>compass</li>
+<li>claymate</li>
+</ul>
+<h3>Frameworks</h3>
+<ul>
+<li>Phalcon PHP</li>
+</ul>
+<h4>To add</h4>
+<ul>
+<li>Gumby 2</li>
+<li>Backbone.js</li>
+<li>More needed services to phalcon project</li>
+<li>Add mongo service to phalcon project</li>
+</ul>
+<h2>Getting Started</h2>
+<p>I have tried to keep most of the development environment as well as tools self contained in the virtualbox. But you will need the following to get started.</p>
+<ul>
+<li><a href="http://virtualbox.org">VirtualBox</a></li>
+<li><a href="http://getvagrant.com">Vagrant</a></li>
+<li>Git (Optional: if you want to git pull this project instead of downloading the zip)</li>
+</ul>
+<h3>Steps after installing above</h3>
+<ul>
+<li>run <code>git clone https://github.com/eristoddle/FOF.git</code> or download the archive and extract it</li>
+<li>open terminal in <code>FOF/vagrant</code></li>
+<li>run <code>vagrant up</code></li>
+<li>wait for vagrant to finish</li>
+<li>set up this in your host&#39;s host file: <code>192.168.56.101  fof.local</code> (Planning to change this so <a href="http://192.168.56.101">http://192.168.56.101</a> works for the project but can&#39;t quite figure out how to set the main apache doc root, though creating a virtual host seems easy. Editing a host file adds another step to the 3 steps I claim and I planning on keeping it 3 steps.)</li>
+<li>Browse to <a href="http://fof.local">http://fof.local</a></li>
+<li>Your application files will be located in <code>FOF/www/</code> and this folder is shared with the vagrant box var/www</li>
+<li>PhpMyAdmin will be at <a href="http://192.168.56.101/phpmyadmin">http://192.168.56.101/phpmyadmin</a></li>
+<li>fof database is already is use in project. Modify it to add tables. Then use <a href="http://fof.local/webtools.php">http://fof.local/webtools.php</a> to create models and scaffolding</li>
+<li>Xdebug is installed and usable in box</li>
+<li>ssh to vagrant box with <code>vagrant ssh</code>. Then all command line tools in box are available, including:<ul>
+<li>PHP QA Tools</li>
+<li>Phalcon developer tools in Phalcon</li>
+</ul>
+</li>
+</ul>
+<h2>Issues</h2>
+<ul>
+<li>Can&#39;t figure out how to set Apache&#39;s document root so I can just browse to <a href="http://192.168.56.101">http://192.168.56.101</a>, so have to use a virtual host and edit host&#39;s host file for now.</li>
+<li>Phalcon dev tools installed but not available in path, known issue with dev tools</li>
+</ul>
+<h2>TODO</h2>
+<ul>
+<li>Keep all dev tools in shell scripts</li>
+<li>Move tools needed in all environments to puppet</li>
+</ul>
+        </body>
+</html>

@@ -60,6 +60,7 @@ I have tried to keep most of the development environment as well as tools self c
 
 - Can't figure out how to set Apache's document root so I can just browse to http://192.168.56.101, so have to use a virtual host and edit host's host file for now.
 - Phalcon dev tools installed but not available in path, known issue with dev tools
+- www-data permissions on a Windows host. cache files can't be written
 
 ##TODO
 - Keep all dev tools in shell scripts
