@@ -5,4 +5,4 @@ cd /var/www/public
 claymate install
 rm /var/www/public/index.html
 rm /var/www/public/ui.html
-rm -rf /var/www/public/bower_components/Gumby
+rm -rf /var/www/public/bower_components
