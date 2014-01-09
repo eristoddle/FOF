@@ -1,5 +1,5 @@
 {
     "require": {
-        "phalcon/devtools": "dev-master"
+        "michelf/php-markdown": "lib"
     }
 }
