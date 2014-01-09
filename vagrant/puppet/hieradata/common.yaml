@@ -3,7 +3,7 @@ vagrantfile-local:
     vm:
         box: ubuntu-precise12042-x64-vbox43
         box_url: 'http://box.puphpet.com/ubuntu-precise12042-x64-vbox43.box'
-        hostname: null
+        hostname: fof.local
         network:
             private_network: 192.168.56.101
             forwarded_port:
@@ -15,7 +15,9 @@ vagrantfile-local:
                 modifyvm:
                     name: FOF-vm-box
                     natdnshostresolver1: on
-                    memory: '1024'
+                    memory: '512'
+                    cpus: 1
+                    cpuexecutioncap: 50
                 setextradata:
                     VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root: 1
         provision:
@@ -30,11 +32,10 @@ vagrantfile-local:
                 id: vagrant-root
                 source: ../www
                 target: /var/www
-                nfs: 'false'
-            eoGxaU7GbILP:
-                id: vagrant-root
-                source: ../shared
-                target: /home/shared
+                group: www-data
+                mount_options:
+                    - fmode=777
+                    - dmode=666
                 nfs: 'false'
         usable_port_range: 2200..2250
     ssh:
