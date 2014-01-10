@@ -21,19 +21,19 @@
 @import "modular-scale";
 
 @import "var/settings";
-@import "../bower_components/gumby/sass/var/lists";
-@import "../bower_components/gumby/sass/var/icons/entypo";
+@import "var/lists";
+@import "var/icons/entypo";
 
 @import "compass";
 @import "compass/reset";
 
-@import "../bower_components/gumby/sass/functions/all";
+@import "functions/all";
 
-@import "../bower_components/gumby/sass/base";
+@import "base";
 @import "fonts";
-@import "../bower_components/gumby/sass/typography";
-@import "../bower_components/gumby/sass/grid";
-@import "../bower_components/gumby/sass/ui/all";
-@import "../bower_components/gumby/sass/shame";
+@import "typography";
+@import "grid";
+@import "ui/all";
+@import "shame";
 
 @import "custom";
