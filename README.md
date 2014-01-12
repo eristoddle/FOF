@@ -2,7 +2,36 @@
 
 ##Concept
 
+A dev box and deployment tool in one. It can be used by teams very effectively. But it is geared to a one man development/sysadmin team.
+
+###RAD
+
 Get a development environment and web application up and running in less than an hour with all necessary and useful development tools with a modern PHP framework and frontend framework pre-installed and pre-configured and do it by only installing virtualbox, vagrant and running one command: `vagrant up`.
+
+####Frameworks
+
+- Phalcon PHP
+- Gumby 2
+- AngularJs
+
+####Package Management
+
+- PHP: Composer
+- JS: Bower
+
+####Tools
+
+- Phalcon Web Tools
+- PhpMyAdmin
+- Puphpet
+- CodeMirror
+- Prebuilt Project Dev Admin to reconfigure project, handle sass/compass, add/remove javascript libraries
+
+###Deployment
+
+Plus, I as developer want to be able to mock up an idea quickly, add necessary linux packages on the fly when needed and get at least a halfway working application going before I put it on an other environment, i.e. live on the web. But by the time the application is too that point, I have no idea how custom my box is by then.
+
+So I want to be able to change the configuration of the box in puppet. That way when the site is live, I have a template of the server I need waiting and the site can be live quickly.
 
 ##Project Contents
 
@@ -28,7 +57,8 @@ Get a development environment and web application up and running in less than an
 
 ####To add
 - Gumby 2
-- Backbone.js
+- Angular.js
+- Require.js
 - More needed services to phalcon project
 - Add mongo service to phalcon project
 
