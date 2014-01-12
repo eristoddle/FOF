@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+{{ get_doctype() }}
 <html>
 {{ partial("partials/head") }}
-<body class="grid-feature" id="features">
+<body class="grid-feature">
 {{ partial("partials/navbar") }}
 
 <div class="wrapper">
