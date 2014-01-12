@@ -1,5 +1,8 @@
 {
-    "name": "gumby",
-    "version": "2.6.0",
-    "main": ["./js/libs/gumby.min.js", "./css/gumby.css"]
+    "name": "FOF",
+    "version": "0.0.1",
+    "dependencies": {
+        "angularjs": "latest",
+        "requirejs": "latest"
+    }
 }

@@ -48,6 +48,8 @@ So I want to be able to change the configuration of the box in puppet. That way 
 - nodejs
 - grunt
 - bower
+- yeoman
+- generator-phalcon
 - sass
 - compass
 - claymate
