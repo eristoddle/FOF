@@ -34,7 +34,41 @@
 <h2>
 <a name="concept" class="anchor" href="#concept"><span class="octicon octicon-link"></span></a>Concept</h2>
 
+<p>A dev box and deployment tool in one. It can be used by teams very effectively. But it is geared to a one man development/sysadmin team.</p>
+
+<h3>
+<a name="rad" class="anchor" href="#rad"><span class="octicon octicon-link"></span></a>RAD</h3>
+
 <p>Get a development environment and web application up and running in less than an hour with all necessary and useful development tools with a modern PHP framework and frontend framework pre-installed and pre-configured and do it by only installing virtualbox, vagrant and running one command: <code>vagrant up</code>.</p>
+
+<h4>
+<a name="frameworks" class="anchor" href="#frameworks"><span class="octicon octicon-link"></span></a>Frameworks</h4>
+
+<ul>
+<li>Phalcon PHP</li>
+<li>Gumby 2</li>
+<li>AngularJs</li>
+</ul><h4>
+<a name="package-management" class="anchor" href="#package-management"><span class="octicon octicon-link"></span></a>Package Management</h4>
+
+<ul>
+<li>PHP: Composer</li>
+<li>JS: Bower</li>
+</ul><h4>
+<a name="tools" class="anchor" href="#tools"><span class="octicon octicon-link"></span></a>Tools</h4>
+
+<ul>
+<li>Phalcon Web Tools</li>
+<li>PhpMyAdmin</li>
+<li>Puphpet</li>
+<li>CodeMirror</li>
+<li>Prebuilt Project Dev Admin to reconfigure project, handle sass/compass, add/remove javascript libraries</li>
+</ul><h3>
+<a name="deployment" class="anchor" href="#deployment"><span class="octicon octicon-link"></span></a>Deployment</h3>
+
+<p>Plus, I as developer want to be able to mock up an idea quickly, add necessary linux packages on the fly when needed and get at least a halfway working application going before I put it on an other environment, i.e. live on the web. But by the time the application is too that point, I have no idea how custom my box is by then.</p>
+
+<p>So I want to be able to change the configuration of the box in puppet. That way when the site is live, I have a template of the server I need waiting and the site can be live quickly.</p>
 
 <h2>
 <a name="project-contents" class="anchor" href="#project-contents"><span class="octicon octicon-link"></span></a>Project Contents</h2>
@@ -59,7 +93,7 @@
 <li>compass</li>
 <li>claymate</li>
 </ul><h3>
-<a name="frameworks" class="anchor" href="#frameworks"><span class="octicon octicon-link"></span></a>Frameworks</h3>
+<a name="frameworks-1" class="anchor" href="#frameworks-1"><span class="octicon octicon-link"></span></a>Frameworks</h3>
 
 <ul>
 <li>Phalcon PHP</li>
@@ -68,7 +102,8 @@
 
 <ul>
 <li>Gumby 2</li>
-<li>Backbone.js</li>
+<li>Angular.js</li>
+<li>Require.js</li>
 <li>More needed services to phalcon project</li>
 <li>Add mongo service to phalcon project</li>
 </ul><h2>
@@ -111,6 +146,7 @@
 <ul>
 <li>Can't figure out how to set Apache's document root so I can just browse to <a href="http://192.168.56.101">http://192.168.56.101</a>, so have to use a virtual host and edit host's host file for now.</li>
 <li>Phalcon dev tools installed but not available in path, known issue with dev tools</li>
+<li>www-data permissions on a Windows host. cache files can't be written</li>
 </ul><h2>
 <a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
 
