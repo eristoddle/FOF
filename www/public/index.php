@@ -31,13 +31,6 @@ include __DIR__ . "/../app/config/routes.php";
 $application = new \Phalcon\Mvc\Application($di);
 
 // Register the installed modules
-$application->registerModules(
-    array(
-        'dev' => array(
-            'className' => 'App\Dev',
-            'path'      => $config->application->modulesDir . '/dev/Module.php',
-        ),
-    )
-);
+include __DIR__ . "/../app/config/modules.php";
 
 echo $application->handle()->getContent();

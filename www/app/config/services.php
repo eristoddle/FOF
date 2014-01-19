@@ -99,3 +99,38 @@ $di->set(
         return $dispatcher;
     }
 );
+
+////Register the flash service with custom CSS classes
+$di->set(
+    'flash', function () {
+        return new \Phalcon\Flash\Direct(array(
+            'error' => 'alert alert-error',
+            'success' => 'alert alert-success',
+            'notice' => 'alert alert-info',
+        ));
+    }
+);
+
+//Set up encryption key
+$di->set(
+    'crypt', function () use ($config) {
+        $crypt = new Phalcon\Crypt();
+        $crypt->setKey($config->application->encryptKey);
+        return $crypt;
+    }
+);
+
+//Dispatcher
+/*$di->set(
+    'dispatcher', function () use ($di) {
+        $eventsManager = $di->getShared('eventsManager');
+        $security = new Security($di);
+        $eventsManager->attach('dispatch', $security);
+        $dispatcher = new Phalcon\Mvc\Dispatcher();
+        $dispatcher->setEventsManager($eventsManager);
+        return $dispatcher;
+    }
+);*/
+
+//Load config into the di
+$di->set('config', $config);

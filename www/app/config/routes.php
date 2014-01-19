@@ -6,6 +6,8 @@ $di->set(
 
         $router = new Phalcon\Mvc\Router(false);
 
+        //$router->setDefaultModule("base");
+
         $router->add(
             '/:module/:controller/:action/:params', array(
                 'module' => 1,
