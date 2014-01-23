@@ -1,5 +1,6 @@
 {
     "require": {
-        "michelf/php-markdown": "lib"
+        "michelf/php-markdown": "lib",
+        "codeception/codeception": "*"
     }
 }
