@@ -5,7 +5,7 @@ class IndexController extends ControllerBase {
 
     public function indexAction() {
         $this->tag->prependTitle("Development Tools - ");
-        echo "dev";
+        $this->view->content = 'Dev';
     }
 
 }

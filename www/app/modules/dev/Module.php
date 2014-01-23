@@ -6,6 +6,7 @@ use Phalcon\Loader,
     Phalcon\Mvc\Dispatcher,
     Phalcon\Mvc\View,
     Phalcon\Mvc\ModuleDefinitionInterface,
+    Phalcon\Mvc\View\Engine\Volt as VoltEngine,
     Phalcon\Mvc\User\Module as UserModule;
 
 class Module extends UserModule implements ModuleDefinitionInterface {
@@ -27,7 +28,6 @@ class Module extends UserModule implements ModuleDefinitionInterface {
             array(
                 'App\Dev' => __DIR__,
                 'App\Dev\Controllers' => __DIR__ . '/controllers',
-                //'App\Controllers' => __DIR__ . '/../../controllers/'
             )
         );
 
@@ -38,7 +38,7 @@ class Module extends UserModule implements ModuleDefinitionInterface {
      * Register specific services for the module
      */
     public function registerServices($di) {
-        $appConfig = $di->get('config');
+        $config = $di->get('config');
 
         //Registering a dispatcher
         $di->set(
@@ -51,11 +51,33 @@ class Module extends UserModule implements ModuleDefinitionInterface {
 
         //Registering the view component
         $di->set(
-            'view', function () {
+            'view', function () use ($config) {
+
                 $view = new View();
+
                 $view->setViewsDir(__DIR__ . '/views');
+
+                $view->registerEngines(
+                    array(
+                        '.volt' => function ($view, $di) use ($config) {
+
+                                $volt = new VoltEngine($view, $di);
+
+                                $volt->setOptions(
+                                    array(
+                                        'compiledPath' => $config->application->cacheDir,
+                                        'compiledSeparator' => '_'
+                                    )
+                                );
+
+                                return $volt;
+                            },
+                        '.phtml' => 'Phalcon\Mvc\View\Engine\Php'
+                    )
+                );
+
                 return $view;
-            }
+            }, true
         );
     }
 
